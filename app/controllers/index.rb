@@ -14,7 +14,7 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-    "#{values["todos"][0]}"
+    "#{values["todos"]}"
   else
     "{\"success\":0}"
   end
