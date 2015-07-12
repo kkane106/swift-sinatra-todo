@@ -14,25 +14,9 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-    "(
-    Again,
-    Refresh,
-    Maguro,
-    Hamachi,
-    Uni,
-    Saba,
-    Ebi,
-    Sake,
-    Tai,
-    molly,
-    banana,
-    boom,
-    new,
-    test,
-    test,
-    test,
-    nanners
-)"
+    # "#{values["todos"]}"
+    let my_hash = {:banana => "test"}
+    JSON.generate(my_hash)
   else
     "{\"success\":0}"
   end
