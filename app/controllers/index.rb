@@ -4,7 +4,7 @@ end
 
 get '/sushi.json'  do
 	content_type :json
-	return {:sushi => ["Refresh", "Maguro", "Hamachi", "Uni", "Saba", "Ebi", "Sake", "Tai"]}.to_json
+	return {:sushi => ["Again", "Refresh", "Maguro", "Hamachi", "Uni", "Saba", "Ebi", "Sake", "Tai"]}.to_json
 end
 
 get '/nothing_to_see' do
