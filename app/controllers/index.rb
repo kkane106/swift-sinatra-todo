@@ -16,7 +16,7 @@ post '/login' do
   if values["todos"]
   	p "look_here: #{values}"
     # "#{values["todos"]}"
-    "{\"todos\"=>[\"success\"]}"
+    "{\"todos\":\"success\"}"
   else
     "{\"success\":0}"
   end
