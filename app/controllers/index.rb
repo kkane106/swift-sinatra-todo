@@ -13,7 +13,7 @@ end
 
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
-  if values["username"]=='jameson' && values["password"]=='password'
+  if values["todos"]
     "{\"success\":1}"
   else
     "{\"success\":0}"
