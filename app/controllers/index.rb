@@ -14,7 +14,7 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-    "#{values["todos"]}"
+    "#{values}"
     # response = values["todos"]
     # response.map do |todo|
     # 	todo = "banana"
