@@ -14,7 +14,7 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-  	p "look_here: #{values["todos"]}"
+  	p "look_here: #{values}"
     "#{values["todos"]}"
     # let my_hash = { "response" => "Success" }
    	# JSON.generate(my_hash)
