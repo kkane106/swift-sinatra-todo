@@ -14,12 +14,12 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-    # "#{values["todos"]}"
-    response = values["todos"]
-    response.map do |todo|
-    	todo = "banana"
-    end
-    return response
+    "#{values["todos"]}"
+    # response = values["todos"]
+    # response.map do |todo|
+    # 	todo = "banana"
+    # end
+    # return response
   else
     "{\"success\":0}"
   end
