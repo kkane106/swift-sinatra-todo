@@ -19,6 +19,7 @@ post '/login' do
     response.map do |todo|
     	todo = "banana"
     end
+    return response
   else
     "{\"success\":0}"
   end
