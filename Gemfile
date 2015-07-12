@@ -16,7 +16,7 @@ gem 'thin'
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
 
-gem 'rake'
+gem 'rake', '~>10.4.2'
 
 gem 'shotgun'
 

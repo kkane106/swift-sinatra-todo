@@ -19,3 +19,28 @@ post '/login' do
     "{\"success\":0}"
   end
 end
+
+
+get "/todos" do
+  @todos = Todo.order("created_at DESC")
+  redirect "/new" if @todo.empty?
+  erb :todos
+end
+
+get "/new" do
+  erb :new
+end
+
+post "/new" do
+  @todo = Todo.new(params[:todo])
+  if @todo.save
+    redirect "todo/#{@todo.id}"
+  else
+    erb :new
+  end
+end
+
+get "/todo/:id" do
+  @todo = todo.find_by_id(params[:id])
+  erb :todo
+end
