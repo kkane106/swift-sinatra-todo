@@ -14,7 +14,11 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-    "#{values["todos"]}"
+    # "#{values["todos"]}"
+    response = values["todos"]
+    response.map do |todo|
+    	todo = "banana"
+    end
   else
     "{\"success\":0}"
   end
@@ -22,8 +26,7 @@ end
 
 
 get "/todos" do
-  @todos = Todo.order("created_at DESC")
-  redirect "/new" if @todo.empty?
+  @todos = Todo.all
   erb :todos
 end
 
@@ -41,6 +44,6 @@ post "/new" do
 end
 
 get "/todo/:id" do
-  @todo = todo.find_by_id(params[:id])
+  @todo = Todo.find_by_id(params[:id])
   erb :todo
 end
