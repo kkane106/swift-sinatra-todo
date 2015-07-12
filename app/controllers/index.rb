@@ -14,8 +14,25 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-    "#{values["todos"]}"
-    # "(Yes)"
+    "(
+    Again,
+    Refresh,
+    Maguro,
+    Hamachi,
+    Uni,
+    Saba,
+    Ebi,
+    Sake,
+    Tai,
+    molly,
+    banana,
+    boom,
+    new,
+    test,
+    test,
+    test,
+    nanners
+)"
   else
     "{\"success\":0}"
   end
