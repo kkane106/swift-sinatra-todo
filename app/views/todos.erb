@@ -1,12 +1,11 @@
 <h1>Todos</h1>
-<ul>
-<% @todos.each do |todo| %>
-  <li>
-    <h2><a href="/todo/<%= todo.id %>"><%= todo.text %></a></h2>
-  </li>
-<% end %>
-
 <div id="show">
-	</div>
-</ul>
+	<ul>
+	<% @todos.each do |todo| %>
+	  <li>  	
+	    <h2><a href="/todo/<%= todo.id %>"><%= todo.text %></a></h2>
+	  </li>
+	<% end %>
+	</ul>
+</div>
 <a href="/new">New todo</a>
