@@ -18,8 +18,8 @@ post '/login' do
     # "#{values["todos"]}"
     # "{\"todos\":[\"success\", \"success2\"]}"
     @todos = Todo.all
-    p "look_here: {\"todos\": @todos.to_json}"
-    "{\"todos\": @todos.to_json}"
+    p "look_here: {\"todos\": #{@todos.to_json}}"
+    "{\"todos\": #{@todos.to_json}}"
   else
     "{\"success\":0}"
   end
