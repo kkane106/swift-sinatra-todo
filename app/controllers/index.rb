@@ -16,7 +16,12 @@ post '/login' do
   if values["todos"]
   	p "look_here: #{values}"
     # "#{values["todos"]}"
-    "{\"todos\":[\"success\", \"success2\"]}"
+    # "{\"todos\":[\"success\", \"success2\"]}"
+    @todos = Todo.all
+    @todos.map do |todo|
+    	"\"#{todo.text}\""
+    end
+    "{\"todos\": #{@todos} }"
   else
     "{\"success\":0}"
   end
