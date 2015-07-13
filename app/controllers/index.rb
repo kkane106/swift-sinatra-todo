@@ -23,7 +23,7 @@ post '/login' do
   	p "THIS IS THE WHAT WE GOT AFTER PARSE: #{values["todos"]}"
   	@todo = Todo.new(:text => values["todos"])
     @todo.save
-      return {:todo => @todo}.to_json
+      return {:todo => [@todo]}.to_json
   else
     return "error".to_json
   end
