@@ -21,7 +21,9 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-  	values
+  	values["todos"]
+  	# @todo = Todo.new(values["todos"])
+  	# if @todo.save
   else
     "{\"success\":0}"
   end
