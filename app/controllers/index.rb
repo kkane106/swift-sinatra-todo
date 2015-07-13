@@ -19,7 +19,7 @@ post '/login' do
     # "{\"todos\":[\"success\", \"success2\"]}"
     @todos = Todo.all
     p "look_here: {\"todos\": #{@todos} }"
-    "{\"todos\": #{@todos.map{|todo| "\"#{todo.text}\"}" }
+    "{\"todos\": #{@todos.map{|todo| "\"#{todo.text}\""} }"
   else
     "{\"success\":0}"
   end
