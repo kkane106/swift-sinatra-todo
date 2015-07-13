@@ -7,7 +7,7 @@ get '/sushi.json'  do
 	return {:sushi => ["Again", "Refresh", "Maguro", "Hamachi", "Uni", "Saba", "Ebi", "Sake", "Tai"]}.to_json
 end
 
-get '/todos_data' do
+get '/todos.json' do
 	@todos = Todo.all
 	content_type :json
 	p "{:todos => #{@todos.to_json}}"
