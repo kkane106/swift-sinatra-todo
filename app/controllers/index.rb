@@ -21,12 +21,7 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-  	# p "look_here: #{values}"
-    # "#{values["todos"]}"
-    # "{\"todos\":[\"success\", \"success2\"]}"
-    @todos = Todo.all
-    p "look_here: {\"todos\": #{@todos.to_json}}"
-    "{\"todos\": #{@todos.to_json}}"
+  	"{\"success\":1}"
   else
     "{\"success\":0}"
   end
