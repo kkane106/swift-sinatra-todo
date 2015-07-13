@@ -21,7 +21,7 @@ end
 post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-  	p "#{values["todos"]}"
+  	p "THIS IS THE WHAT WE GOT AFTER PARSE: #{values["todos"]}"
   	return values
   	# @todo = Todo.new(values["todos"])
   	# if @todo.save
