@@ -11,7 +11,7 @@ get '/todos_data' do
 	@todos = Todo.all
 	content_type :json
 	p "{:todos => #{@todos.to_json}}"
-	return {:todos => @todos}.to_json
+	return {:todos => [@todos]}.to_json
 end
 
 get '/nothing_to_see' do
