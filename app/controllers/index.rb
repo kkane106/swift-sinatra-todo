@@ -12,10 +12,9 @@ get '/nothing_to_see' do
   "Nothing to see here. Move along."
 end
 
-post '/login' do
+post '/create_todo' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
-  	p "THIS IS THE WHAT WE GOT AFTER PARSE: #{values["todos"]}"
   	@todo = Todo.new(:text => values["todos"])
     @todo.save
       return {:todo => [@todo]}.to_json
@@ -24,6 +23,15 @@ post '/login' do
   end
 end
 
+
+post "/delete_todo" do
+  values = JSON.parse(request.env["rack.input"].read)
+  if values["todos"]
+    Todo.find_by_id(values["todos"]).destroy
+    return "success".to_json
+  else
+    return "error".to_json
+  end
 
 get "/todos" do
   @todos = Todo.all
