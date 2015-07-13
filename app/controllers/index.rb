@@ -32,6 +32,7 @@ post "/delete_todo" do
   else
     return "error".to_json
   end
+end
 
 get "/todos" do
   @todos = Todo.all
