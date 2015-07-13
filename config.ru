@@ -1,3 +1,4 @@
+require './ios-heroku-test'
 # Require config/environment.rb
 require ::File.expand_path('../config/environment',  __FILE__)
 
