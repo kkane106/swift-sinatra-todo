@@ -10,7 +10,6 @@ end
 get '/todos.json' do
 	@todos = Todo.all
 	content_type :json
-	p "{:todos => #{@todos.to_json}}"
 	return {:todos => @todos}.to_json
 end
 
@@ -24,7 +23,7 @@ post '/login' do
   	p "THIS IS THE WHAT WE GOT AFTER PARSE: #{values["todos"]}"
   	@todo = Todo.new(:text => values["todos"])
     @todo.save
-      return {:todos => @todo}.to_json
+      return {:todo => @todo}.to_json
   else
     return "error".to_json
   end
