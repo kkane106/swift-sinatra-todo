@@ -22,14 +22,11 @@ post '/login' do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
   	p "THIS IS THE WHAT WE GOT AFTER PARSE: #{values["todos"]}"
-  	@todo = Todo.new(values["todos"])
-  	if @todo.save
+  	@todo = Todo.new(:text => values["todos"])
+    @todo.save
       return {:todos => @todo}.to_json
-    else
-      return "error".to_json
-    end
   else
-    "{\"success\":0}"
+    return "error".to_json
   end
 end
 
