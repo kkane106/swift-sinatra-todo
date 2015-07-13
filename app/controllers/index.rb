@@ -2,11 +2,6 @@ get '/' do
   erb :index
 end
 
-get '/sushi.json'  do
-	content_type :json
-	return {:sushi => ["Again", "Refresh", "Maguro", "Hamachi", "Uni", "Saba", "Ebi", "Sake", "Tai"]}.to_json
-end
-
 get '/todos.json' do
 	@todos = Todo.all
 	content_type :json
