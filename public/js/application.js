@@ -3,7 +3,7 @@ function executeQuery() {
     url: 'http://swift-sushi-json.herokuapp.com/todos',
     success: function(data) {
       var newContent = $(data);
-      $('#show').html(newContent);
+      $('#show').replaceWith(newContent);
     }
   });
   setTimeout(executeQuery, 8000); // you could choose not to continue on failure...
