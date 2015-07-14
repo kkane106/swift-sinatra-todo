@@ -20,3 +20,8 @@ get "/todo/:id" do
   @todo = Todo.find_by_id(params[:id])
   erb :todo
 end
+
+post "/todo/:id" do
+  @todo = Todo.find_by_id(params[:id]).destroy
+  erb :todos
+end
