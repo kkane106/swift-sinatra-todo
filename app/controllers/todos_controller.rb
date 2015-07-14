@@ -22,9 +22,10 @@ get "/todo/:id" do
 end
 
 patch "/todo/:id/" do |id|
-  @todo = Todo.find(id).update!(params[:todo])
+  @todo = Todo.find_by_id(id)
+  @todo.update!(params[:todo])
   p "LOOK HERE #{@todo}, #{params[:todo]}"
-  redirect "todos"
+  redirect "/todos"
 end
 
 delete "/todo/:id" do |id|
