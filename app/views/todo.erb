@@ -1,6 +1,7 @@
 <p><%= @todo.text %></p>
 <a href="/todos">All todos</a>
 <form action="/todo/<%=@todo.id%>" method="post">
+	<input type="hidden" name="_method" placeholder="Name" value="patch">
 	<input name="todo[text]" size="50" value="<%= @todo.text %>"><br>
 	<input type="submit" value="Update!">
 </form>

@@ -21,7 +21,7 @@ get "/todo/:id" do
   erb :todo
 end
 
-post "/todo/:id/" do |id|
+patch "/todo/:id/" do |id|
   @todo = Todo.find(id).update!(params[:todo])
   p "LOOK HERE #{@todo}, #{params[:todo]}"
   redirect "todos"
