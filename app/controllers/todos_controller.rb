@@ -3,11 +3,11 @@ get "/todos" do
   erb :todos
 end
 
-get "/new" do
+get "/todos/new" do
   erb :new
 end
 
-post "/new" do
+post "/todos" do
   @todo = Todo.new(params[:todo])
   if @todo.save
     redirect "todo/#{@todo.id}"

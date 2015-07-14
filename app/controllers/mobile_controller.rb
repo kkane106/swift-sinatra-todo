@@ -9,7 +9,6 @@ post '/create_todo' do
   end
 end
 
-
 post "/delete_todo" do
   values = JSON.parse(request.env["rack.input"].read)
   if values["todos"]
