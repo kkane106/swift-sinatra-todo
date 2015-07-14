@@ -4,7 +4,10 @@
 	<ul>
 	<% @todos.each do |todo| %>
 	  <li>  	
-	    <h2><a href="/todo/<%= todo.id %>"><%= todo.text %></a></h2>
+	    <a href="/todo/<%= todo.id %>"><%= todo.text %></a> ::: 
+			<form accept-charset="UTF-8" action="/todo/<% todo.id %>" method="post" id="delete">
+			</form>
+			<button type="submit" form="delete" value="submit">Delete</button>
 	  </li>
 	<% end %>
 	</ul>
