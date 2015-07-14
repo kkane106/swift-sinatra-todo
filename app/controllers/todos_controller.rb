@@ -21,6 +21,11 @@ get "/todo/:id" do
   erb :todo
 end
 
+patch "/todo/:id/" do |id|
+  Todo.find(id).update!(params[:todo])
+  redirect "todos"
+end
+
 delete "/todo/:id" do |id|
   Todo.find(id).destroy
   redirect "todos"
