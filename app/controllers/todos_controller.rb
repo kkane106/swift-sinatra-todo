@@ -21,7 +21,7 @@ get "/todo/:id" do
   erb :todo
 end
 
-post "/todo/:id" do
-  @todo = Todo.find_by_id(params[:id]).destroy
-  erb :todos
+delete "/todo/:id" do |id|
+  Todo.find(id).destroy
+  erb "/"
 end
