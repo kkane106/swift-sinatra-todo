@@ -23,5 +23,5 @@ end
 
 delete "/todo/:id" do |id|
   Todo.find(id).destroy
-  erb "/"
+  erb :todos
 end
