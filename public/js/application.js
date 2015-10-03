@@ -7,7 +7,7 @@
 //     }
 //   });
   // setTimeout(executeQuery, 8000); // you could choose not to continue on failure...
-}
+// }
 
 
 // $( "#dataTable tbody tr" ).on( "click", function() {
