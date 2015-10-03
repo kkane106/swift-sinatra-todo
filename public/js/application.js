@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
   $("new").click(function(){
     $.get('/new', function(data){
-      $(".results").html(data);
+      $(".new").html(data);
     });
   });
 });
