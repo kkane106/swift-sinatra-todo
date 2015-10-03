@@ -10,11 +10,15 @@ function executeQuery() {
 }
 
 
+// $( "#dataTable tbody tr" ).on( "click", function() {
+//   console.log( $( this ).text() );
+// });
+
 $(document).ready(function() {
   // run the first time; all subsequent calls will take care of themselves
   setTimeout(executeQuery, 8000);
 
-  $("todos").click(function(){
+  $(".todos").click(function(){
     $.get('/todos', function(data){
       $(".results").html(data);
     });
