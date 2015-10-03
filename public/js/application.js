@@ -29,10 +29,10 @@ $(document).ready(function() {
     });
   });
   $(".closeNew").click(function(){
-    $(".new").empty();
+    $(".newForm").empty();
   });
   $(".closeTodos").click(function(){
-    $(".todos").empty();
+    $(".results").empty();
   })
 });
 
