@@ -28,5 +28,11 @@ $(document).ready(function() {
       $(".newForm").html(data);
     });
   });
+  $(".closeNew").click(function(){
+    $(".new").empty();
+  });
+  $(".closeTodos").click(function(){
+    $(".todos").empty();
+  })
 });
 
