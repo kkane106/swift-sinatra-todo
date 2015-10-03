@@ -15,7 +15,7 @@ $(document).ready(function() {
   setTimeout(executeQuery, 8000);
 
   $("button").click(function(){
-    $.get('/todo/3', function(data){
+    $.get('/todo/10', function(data){
       $(".results").html(data);
     });
   });
