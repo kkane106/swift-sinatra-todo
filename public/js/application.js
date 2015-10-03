@@ -14,8 +14,13 @@ $(document).ready(function() {
   // run the first time; all subsequent calls will take care of themselves
   setTimeout(executeQuery, 8000);
 
-  $("button").click(function(){
-    $.get('/todo/10', function(data){
+  $("todos").click(function(){
+    $.get('/todos', function(data){
+      $(".results").html(data);
+    });
+  });
+  $("new").click(function(){
+    $.get('/new', function(data){
       $(".results").html(data);
     });
   });
