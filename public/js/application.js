@@ -23,9 +23,9 @@ $(document).ready(function() {
       $(".results").html(data);
     });
   });
-  $("new").click(function(){
+  $(".new").click(function(){
     $.get('/new', function(data){
-      $(".new").html(data);
+      $(".newForm").html(data);
     });
   });
 });
